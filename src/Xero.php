@@ -234,7 +234,7 @@ class Xero
             $data  = array_merge($data, $tenantData);
             $where = ['tenant_id' => $data['tenant_id']];
         } else {
-            $where = ['id' => 1];
+            $where = ['id' => 0];
         }
 
         return XeroToken::updateOrCreate($where, $data);
